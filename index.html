@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenova — Streamer & Creator</title>
+    <meta name="description" content="Chill streams, unfiltered gameplay, and the kind of commentary that makes you stay for five more hours. Watch Zenova live on YouTube and Twitch.">
+    <!-- Google Fonts: Playfair Display & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Our Styles -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="main-nav">
+        <div class="nav-container">
+            <div class="brand">Zenova</div>
+            <ul class="nav-links">
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <div class="nav-right">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon-dark"><i data-lucide="moon"></i></span>
+                    <span class="theme-icon-light"><i data-lucide="sun"></i></span>
+                </button>
+                <div id="live-badge" class="live-badge">
+                    <div class="pulsing-dot"></div>
+                    LIVE NOW
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero container" data-reveal>
+        <div class="hero-content">
+            <div class="eyebrow">GAMING · STREAMING · CONTENT</div>
+            <h1>Play calm.<br><em>Win loud.</em></h1>
+            <p>Chill streams, unfiltered gameplay, and the kind of<br>commentary that makes you stay for five more hours.</p>
+            <div class="buttons">
+                <a href="https://www.youtube.com/@IGaveItABash/videos" target="_blank" id="btn-watch" class="btn btn-outline">Watch now</a>
+                <a href="https://discord.gg/uR8RKC9UB" target="_blank" id="btn-discord" class="btn btn-outline">Join Discord</a>
+            </div>
+        </div>
+        <div class="hero-highlight">
+            <h2>4yr</h2>
+            <p>on youtube</p>
+        </div>
+    </section>
+
+    <!-- Stats Row -->
+    <section class="stats" data-reveal>
+        <div class="stats-container">
+            <div class="stat-item">
+                <h3 id="stat-subs">312K</h3>
+                <p>subscribers</p>
+            </div>
+            <div class="stat-item">
+                <h3 id="stat-views">1.8M</h3>
+                <p>total views</p>
+            </div>
+            <div class="stat-item">
+                <h3 id="stat-videos">300+</h3>
+                <p>total videos</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos" class="videos container" data-reveal>
+        <div class="section-header-row">
+            <h2>Latest videos</h2>
+            <a href="https://www.youtube.com/@IGaveItABash/videos" target="_blank" id="link-view-all" class="view-all">View all &rarr;</a>
+        </div>
+        <div id="video-container" class="video-grid">
+            <!-- Videos injected via JS -->
+            <div class="skeleton-card"><div class="skeleton-thumb"></div><div class="skeleton-line wide"></div><div class="skeleton-line narrow"></div></div>
+            <div class="skeleton-card"><div class="skeleton-thumb"></div><div class="skeleton-line wide"></div><div class="skeleton-line narrow"></div></div>
+            <div class="skeleton-card"><div class="skeleton-thumb"></div><div class="skeleton-line wide"></div><div class="skeleton-line narrow"></div></div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="schedule container" data-reveal>
+        <h2>Stream schedule</h2>
+        <div class="schedule-grid">
+            <div class="schedule-day" id="schedule-mon">
+                <span class="day-name">MON</span>
+                <span class="day-time">7 PM</span>
+            </div>
+            <div class="schedule-day" id="schedule-tue">
+                <span class="day-name">TUE</span>
+                <span class="day-time">—</span>
+            </div>
+            <div class="schedule-day" id="schedule-wed">
+                <span class="day-name">WED</span>
+                <span class="day-time">8 PM</span>
+            </div>
+            <div class="schedule-day" id="schedule-thu">
+                <span class="day-name">THU</span>
+                <span class="day-time">7 PM</span>
+            </div>
+            <div class="schedule-day" id="schedule-fri">
+                <span class="day-name">FRI</span>
+                <span class="day-time">—</span>
+            </div>
+            <div class="schedule-day" id="schedule-sat">
+                <span class="day-name">SAT</span>
+                <span class="day-time">3 PM</span>
+            </div>
+            <div class="schedule-day" id="schedule-sun">
+                <span class="day-name">SUN</span>
+                <span class="day-time">3 PM</span>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- About Section -->
+    <section id="about" class="about container" data-reveal>
+        <h2>About</h2>
+        <div class="about-grid">
+            <div class="about-image-wrapper">
+                <img src="./profile.jpg" alt="Zenova — Streamer profile photo" class="about-image" id="profile-photo">
+            </div>
+            <div class="about-content">
+                <p>Hey, I'm Zenova. I've been gaming since before I could read, streaming since 2020, and somehow people keep watching. I play everything — RPGs, shooters, the occasional cozy sim when life gets too loud.</p>
+                <p>My streams are chill by design. No rage, no fake hype. Just good games, real reactions, and a chat that's somehow become a whole community.</p>
+                
+                <div class="social-buttons">
+                    <a href="https://www.youtube.com/@IGaveItABash" target="_blank" id="social-youtube" class="social-btn"><i data-lucide="play" fill="currentColor"></i> YouTube</a>
+                    <a href="https://twitch.tv/stimjak" target="_blank" id="social-twitch" class="social-btn"><i data-lucide="circle-dot"></i> Twitch</a>
+                    <a href="https://discord.gg/uR8RKC9UB" target="_blank" id="social-discord" class="social-btn"><i data-lucide="sparkles"></i> Discord</a>
+                    <a href="#" id="social-twitter" class="social-btn"><i data-lucide="arrow-up-right"></i> Twitter / X</a>
+                    <a href="#" id="social-instagram" class="social-btn"><i data-lucide="diamond"></i> Instagram</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer data-reveal>
+        <div class="footer-container">
+            <p>&copy; 2025 Zenova · All rights reserved</p>
+            <p>Built with free tools — no cap</p>
+        </div>
+    </footer>
+
+    <!-- Configuration & Scripts -->
+    <script src="./config.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

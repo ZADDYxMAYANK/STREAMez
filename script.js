@@ -16,7 +16,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 6. Dark/Light mode toggle
     initThemeToggle();
+
+    // 7. Live badge click handler
+    initLiveBadgeClick();
 });
+
+// ===========================
+// Live Badge Click Handler
+// ===========================
+function initLiveBadgeClick() {
+    const liveBadge = document.getElementById('live-badge');
+    const channelUrl = typeof CONFIG !== 'undefined' ? CONFIG.YOUTUBE_CHANNEL_URL : null;
+
+    if (!liveBadge || !channelUrl) return;
+
+    liveBadge.addEventListener('click', () => {
+        window.open(channelUrl, '_blank');
+    });
+}
 
 // ===========================
 // Theme Toggle (Dark / Light)
